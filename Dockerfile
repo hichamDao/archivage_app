@@ -1,5 +1,5 @@
 # Image de base avec Java 17
-FROM eclipse-temurin:17-jdk-jammy
+FROM eclipse-temurin:21-jdk-jammy
 
 # Crée le dossier app dans le conteneur
 WORKDIR /app
