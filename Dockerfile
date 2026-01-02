@@ -5,7 +5,7 @@ FROM eclipse-temurin:21-jdk-jammy
 WORKDIR /app
 
 # Copie le fichier JAR
-COPY demo-0.0.1-SNAPSHOT.jar app.jar
+COPY archivage-SNAPSHOT.jar app.jar
 
 # Expose le port (Railway définit PORT automatiquement)
 ENV PORT=8080
