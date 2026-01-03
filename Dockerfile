@@ -4,9 +4,11 @@ FROM eclipse-temurin:21-jdk-jammy
 # Crée le dossier app dans le conteneur
 WORKDIR /app
 
-# Copie le fichier JAR
-COPY d4-0.0.1-SNAPSHOT.jar app.jar
+RUN echo "Building new version $(date)" > dummy.txt
 
+#Copie le fichier JAR
+
+COPY d4-0.0.1-SNAPSHOT.jar app.jar0
 
 # Expose le port (Railway définit PORT automatiquement)
 ENV PORT=8080
