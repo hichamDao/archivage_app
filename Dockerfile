@@ -1,15 +1,18 @@
-# Image de base avec Java 17
+# base image
 FROM eclipse-temurin:21-jdk-jammy
 
-# Crée le dossier app dans le conteneur
+# WORKDIR
 WORKDIR /app
 
-# Copie le fichier JAR
+# copy jar
 COPY archivage-0.0.1-SNAPSHOT.jar app.jar
 
-# Expose le port (Railway définit PORT automatiquement)
-ENV PORT=8080
-EXPOSE $PORT
+# optional: cache bust
+ARG CACHEBUST=1
+RUN echo "Cache bust $CACHEBUST"
 
-# Commande de lancement
-ENTRYPOINT ["java","-jar","app.jar"]
+# expose port
+EXPOSE 8080
+
+# run jar
+CMD ["java", "-jar", "app.jar"]
