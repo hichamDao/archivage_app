@@ -15,4 +15,5 @@ RUN echo "Cache bust $CACHEBUST"
 EXPOSE 8080
 
 # run jar
-CMD ["java", "-jar", "app.jar"]
+
+CMD ["java", "-Dserver.port=${PORT}", "-jar", "appv3.jar"]
