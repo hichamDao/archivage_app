@@ -5,7 +5,7 @@ FROM eclipse-temurin:21-jdk-jammy
 WORKDIR /app
 
 # copy jar
-COPY app2.jar app.jar
+COPY app3.jar app.jar
 
 # optional: cache bust
 ARG CACHEBUST=1
