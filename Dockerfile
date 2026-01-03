@@ -16,4 +16,4 @@ EXPOSE 8080
 
 # run jar
 
-CMD ["java", "-Dserver.port=${PORT}", "-jar", "appv3.jar"]
+CMD ["java", "-Dserver.port=${PORT}", "-jar", "app.jar"]
